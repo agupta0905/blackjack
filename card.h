@@ -14,5 +14,6 @@ class Card
 public:
 	void print();
 	Card(int a, int b);		//a is suite, b is value
+	int getValue();
 };
 #endif // __CARD_H_INCLUDED__ 

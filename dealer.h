@@ -5,14 +5,16 @@
 
 //=================================
 // included dependencies
-#include<vector>
+#include <vector>
 #include "card.h"
+#include "participant.h"
+#include <iostream>
 //=================================
 // the actual class
-class Dealer
+class Dealer: public Participant
 {
-std::vector<Card> v;
 public:
-	void print();
+	bool hit_or_stay();
+	void printUpcard();
 };
 #endif // __DEALER_H_INCLUDED__ 

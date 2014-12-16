@@ -17,10 +17,10 @@ void Card::print()
 	}
 	switch(suit)
 	{
-		case 0: std::cout<<club<<"\t";break;		
-		case 1:	std::cout<<diamond<<"\t";break;
-		case 2:	std::cout<<heart<<"\t";break;
-		case 3:	std::cout<<spade<<"\t";break;
+		case 0: std::cout<<club<<"\t\t";break;		
+		case 1:	std::cout<<diamond<<"\t\t";break;
+		case 2:	std::cout<<heart<<"\t\t";break;
+		case 3:	std::cout<<spade<<"\t\t";break;
 		default: std::cout<<" Error in printing card suite\t";
 	}
 }
@@ -28,4 +28,8 @@ Card::Card(int a ,int b)
 {
 	suit=a;
 	value=b;
+}
+int Card:: getValue()
+{
+	return value;
 }

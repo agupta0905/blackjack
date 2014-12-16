@@ -6,13 +6,25 @@
 //=================================
 // included dependencies
 #include<vector>
+#include<string>
 #include "card.h"
+#include "participant.h"
 //=================================
 // the actual class
-class Player
+class Player: public Participant
 {
-std::vector<Card> v;
+int gamesPlayed;
+int gamesWon;
+int gamesTied;
+std::string name;
 public:
-	void print();
+	bool hit_or_stay();
+	std::string getName();
+	void setName(std::string str);
+	double getWinpercentage();
+	void won();
+	void lost();
+	void tie();
+	Player();
 };
 #endif // __PLAYER_H_INCLUDED__ 
