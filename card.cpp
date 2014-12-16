@@ -12,10 +12,10 @@ void Card::print()
 		case 2 ... 10:	std::cout<<value << " of ";break;
 		case 11:		std::cout<<"Jack of ";break;
 		case 12:		std::cout<<"Queen of ";break;
-		case 13:		std::cout<<"King of";break;
+		case 13:		std::cout<<"King of ";break;
 		default: 		std::cout<<"Error in printing card value ";
 	}
-	switch(suite)
+	switch(suit)
 	{
 		case 0: std::cout<<club<<"\t";break;		
 		case 1:	std::cout<<diamond<<"\t";break;
@@ -26,6 +26,6 @@ void Card::print()
 }
 Card::Card(int a ,int b)
 {
-	suite=a;
+	suit=a;
 	value=b;
 }

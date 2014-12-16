@@ -11,8 +11,12 @@
 // the actual class
 class Deck
 {
-std::vector<Card> v;
+std::vector<Card> cards;
+int nextcardidx;
 public:
 	void print();
+	Deck();
+	Card drawCard();
+	void Shuffle();
 };
 #endif // __DECK_H_INCLUDED__ 
