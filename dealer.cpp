@@ -11,22 +11,29 @@ void Dealer::printUpcard()
 		std::cout<<"Error printing up card\n";
 	}
 }
-Dealer::Dealer()
-{
-
-}
 bool Dealer::hit_or_stay()
 {
-	int score1;
-	int score2;
+	int score_low;
+	int score_high;
 	if(num_aces==0)
 	{
 		return non_ace_total<17 ? true:false;
 	}
 	else
 	{
-		score1=non_ace_total+ num_aces;
-		score2=non_ace_total+ num_aces+10;
-		return score2<18? true:false;
+		score_low=non_ace_total+ num_aces;
+		score_high=non_ace_total+ num_aces+10;
+		if(score_high<18)
+		{
+			return true;
+		}
+		else if(score_high>21 && score_low <17)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
