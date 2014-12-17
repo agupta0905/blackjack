@@ -11,12 +11,12 @@
 // the actual class
 class Deck
 {
-std::vector<Card> cards;
-int nextcardidx;
+std::vector<Card> cards;		//vector containg the cards in a deck
+int nextcardidx;				//Index to the next valid card available for drawing
 public:
-	void print();
-	Deck();
-	Card drawCard();
-	void Shuffle();
+	void print();				//print the deck
+	Deck();						//constructor of deck
+	Card drawCard();			//return the top most valid card
+	void Shuffle();				//shuffles the deck
 };
 #endif // __DECK_H_INCLUDED__ 

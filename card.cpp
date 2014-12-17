@@ -1,11 +1,12 @@
+/* Class Card*/
 #include "card.h"
 #include<iostream>
-void Card::print()
+void Card::print()								//print the current card					
 {
-	const char heart[] = "\xe2\x99\xa5";
-	const char diamond[] = "\xe2\x99\xa6";
-	const char club[] = "\xe2\x99\xa3";
-	const char spade[] = "\xe2\x99\xa0";
+	const char heart[] = "\xe2\x99\xa5";		//unicode for heart
+	const char diamond[] = "\xe2\x99\xa6";		//unicode for diamond
+	const char club[] = "\xe2\x99\xa3";			//unicode for club
+	const char spade[] = "\xe2\x99\xa0";		//unicode for spade
 	switch(value)
 	{
 		case 1: 		std::cout<<"Ace of "; break;
@@ -24,12 +25,12 @@ void Card::print()
 		default: std::cout<<" Error in printing card suite\t";
 	}
 }
-Card::Card(int a ,int b)
+Card::Card(int a ,int b)					//constructor for card 
 {
 	suit=a;
 	value=b;
 }
-int Card:: getValue()
+int Card:: getValue()						//returns value of card
 {
 	return value;
 }

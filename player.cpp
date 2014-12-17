@@ -1,21 +1,22 @@
+/*Class Player*/
 #include "player.h"
 #include <string>
 #include <iostream>
-Player::Player()
+Player::Player()				//intialise class variables
 {
 	gamesPlayed=0;
 	gamesWon =0;
 	gamesTied=0;
 }
-void Player::setName(std::string str)
+void Player::setName(std::string str)	//set name of player
 {
 	name=str;
 }
-std::string Player::getName()
+std::string Player::getName()			//return name of player
 {
 	return name;
 }
-bool Player::hit_or_stay()
+bool Player::hit_or_stay()				//return true if the player hits else return false
 {
 	std::string response;
 	std::cout<< "Press h to hit and s to stay : ";
@@ -37,18 +38,30 @@ bool Player::hit_or_stay()
 }
 double Player::getWinpercentage()
 {
-	return (double)gamesWon/gamesPlayed;
+	return (double)gamesWon/gamesPlayed;	//returns the win percentage
 }
-void Player::won()
+int Player::numPlayed()						//returns number of games Played
+{
+	return gamesPlayed;
+}
+int Player::numWon()						//Returns number of games Won
+{
+	return gamesWon;
+}
+int Player::numTied()						//Returns number of games Tied
+{
+	return gamesTied;
+}
+void Player::won()							//player won
 {
 	gamesWon++;
 	gamesPlayed++;
 }
-void Player::lost()
+void Player::lost()							//player lost
 {
 	gamesPlayed++;
 }
-void Player::tie()
+void Player::tie()							//round tied
 {
 	gamesTied++;
 	gamesPlayed++;

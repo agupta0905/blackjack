@@ -1,7 +1,8 @@
+/* Class Participant*/
 #include "participant.h"
 #include <iostream>
 #include "card.h"
-void Participant::printHand()
+void Participant::printHand()			//print cards at hand
 {
 	for(int i=0;i<hand.size();i++)
 	{
@@ -9,10 +10,10 @@ void Participant::printHand()
 	}	
 	std::cout<<"\n";
 }
-void Participant::add(Card c)
+void Participant::add(Card c)			//add card to hand
 {
 	hand.push_back(c);
-	if(c.getValue()==1)
+	if(c.getValue()==1)					//maintain correct non ace toatal and ace count
 	{
 		num_aces++;
 	}
@@ -27,26 +28,26 @@ void Participant::add(Card c)
 }
 void Participant::clearHand()
 {
-	hand.clear();
-	num_aces=0;
+	hand.clear();						//clear cards at hand
+	num_aces=0;							
 	non_ace_total=0;
 }
 int Participant::bestscore()
 {
-	int score_high;
+	int score_high;						
 	int score_low;
 	if(num_aces==0)
 	{
-		return non_ace_total;
+		return non_ace_total;			//If no aces in hand
 	}
 	else
 	{
-		score_low = non_ace_total+ num_aces;
-		score_high = non_ace_total+ 10 + num_aces;
-		return score_high < 22 ? score_high:score_low; 
+		score_low = non_ace_total+ num_aces;				//Lower possible score considered
+		score_high = non_ace_total+ 10 + num_aces;			//Higher possible score considered
+		return score_high < 22 ? score_high:score_low; 		// Return best score below 22
 	}
 }
-void Participant::printScore()
+void Participant::printScore()								//print score
 {
 	std::cout<<"Score = "<<bestscore()<<"\n";
 }
