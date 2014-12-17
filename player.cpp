@@ -51,4 +51,5 @@ void Player::lost()
 void Player::tie()
 {
 	gamesTied++;
+	gamesPlayed++;
 }

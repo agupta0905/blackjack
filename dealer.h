@@ -16,5 +16,6 @@ class Dealer: public Participant
 public:
 	bool hit_or_stay();
 	void printUpcard();
+	Dealer();
 };
 #endif // __DEALER_H_INCLUDED__ 

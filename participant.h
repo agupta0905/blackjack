@@ -13,9 +13,13 @@ class Participant
 {
 protected:
 	std::vector<Card> hand;
+	int non_ace_total;
+	int num_aces;
 public:
 	void printHand();
 	void add(Card c);
 	int bestscore();
+	void printScore();
+	void clearHand();
 };
 #endif // __PARTICIPANT_H_INCLUDED__ 

@@ -21,7 +21,7 @@ Deck::Deck()
 			cards.push_back(c);
 		}
 	}
-	Shuffle();
+	//Shuffle();
 	//nextcardidx=0;
 }
 void Deck::print()
